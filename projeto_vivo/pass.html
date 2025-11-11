@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login - Portal de Dados</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0078d7, #003366);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .login-container {
+        background: white;
+        color: #333;
+        padding: 30px;
+        border-radius: 10px;
+        width: 320px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    button {
+        background-color: #0078d7;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #005fa3;
+    }
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+</style>
+</head>
+<body>
+    
+
+<div class="login-container">
+    <h2>🔒 Acesso ao Portal</h2>
+    <input type="text" id="username" placeholder="Usuário" required><br>
+    <input type="password" id="password" placeholder="Senha" required><br>
+    <button id="loginBtn">Entrar</button>
+    <p class="error" id="errorMsg"></p>
+</div>
+
+<script>
+const loginBtn = document.getElementById("loginBtn");
+const errorMsg = document.getElementById("errorMsg");
+
+loginBtn.addEventListener("click", () => {
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    // ✅ Credenciais fixas (pode mudar ou usar localStorage)
+    const validUsers = [
+        { username: "admin", password: "8486" },
+        { username: "Devair", password: "senha123" }
+    ];
+
+    const found = validUsers.find(u => u.username === user && u.password === pass);
+
+    if (found) {
+        localStorage.setItem("usuarioLogado", user);
+        window.location.href = "database.html"; // redireciona para o portal
+    } else {
+        errorMsg.textContent = "Usuário ou senha incorretos.";
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Base Vivo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="index.js">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+
+
+
+
+  <div id="areacabecalho">
+
+    <div id="arealogo">
+      <h1>TRECHO<span class="cinza">SPANS SWAP</span></h1>
+    </div>
+
+    <div id="areamenu">
+      <a href="trechoses.html">TRECHOS ES</a>
+      <a href="trechosrj.html">TRECHOS RJ</a>
+      <a href="pass.html">DATA BASE</a>
+
+
+
+    </div>
+
+    <div id="novo">
+
+
+    </div>
+
+
+
+  </div>
+
+  <!--MAPA-->
+
+  <!DOCTYPE html>
+
+  
+  <div id="map" style="height: 500px;"></div>
+  <!-- Inclua a biblioteca do Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Inicializa o mapa centralizado na área de interesse
+    var map = L.map('map').setView([-22.9068, -43.1729], 7); // Coordenadas médias
+
+    // Adiciona uma camada de mapa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Adiciona marcador para Rio de Janeiro
+    L.marker([-22.9068, -43.1729]).addTo(map)
+      .bindPopup('Rio de Janeiro')
+      .openPopup();
+
+    // Adiciona marcador para Espírito Santo
+    L.marker([-19.6818, -40.3373]).addTo(map)
+      .bindPopup('Espírito Santo');
+  </script>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

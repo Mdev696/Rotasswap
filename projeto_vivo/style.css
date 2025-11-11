@@ -1,0 +1,259 @@
+/*Limpando formataçoes padrão*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #e6e6e6;
+    text-align: center;
+}
+
+/*PARTE GRAFICA*/
+
+
+
+.chart-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #111;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+
+}
+
+.chart {
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 40px;
+    position: relative;
+
+}
+
+.bar {
+    width: calc(25% - 10px);
+    position: relative;
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    ;
+    padding-bottom: 5px;
+
+
+}
+
+.bar:nth-child(2) {
+    background-color: #28a745;
+
+
+}
+
+p {
+    text-align: center;
+}
+
+.bar:nth-child(3) {
+    background-color: #dc3545;
+
+}
+
+.bar:nth-child(4) {
+    background-color: #ffc107;
+}
+
+.bar::after {
+    content: attr(dara-tooltip);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    white-space: nowrap;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+
+
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+.label {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    width: calc(25% - 10px);
+
+}
+
+
+
+/*CABEÇALHO*/
+
+
+#areacabecalho {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+#arealogo,
+#areamenu {
+    padding: 10px;
+}
+
+/*fORMATAÇÃO DO GERAL**/
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+
+}
+
+/*H2 DA BARRA DE PESQUISA*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cinza {
+    color: #4e4e4e;
+}
+
+/*FORMATAÇÃO MENU**/
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: black;
+    padding: 8px 12px;
+}
+
+a:hover {
+    color: #b81466;
+    color: #ffffff;
+
+}
+
+
+/*CRIAÇÃO DA TABELA*/
+
+table {
+    width: 600px;
+    border-collapse: separate;
+    text-align: center;
+    display: inline;
+
+
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+th {
+    text-transform: uppercase;
+    border-top: 4px solid #e90000;
+    border-bottom: 1px solid #e90000;
+    text-align: center;
+    font-size: 78%;
+    letter-spacing: 0.1em;
+}
+
+tr.alternado {
+    background-color: #efefef;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #c3e8c5;
+
+}
+
+.numero {
+    text-align: center;
+
+}
+
+
+
+
+br {
+    padding: 10pxpx;
+}
+
+#planilha {
+    font-size: 90%;
+}
+
+/*DATA BASE*/
+
+#planilha2{
+
+ margin-top: 20px
+ 
+
+}
+
+
+
+td {
+    font-size: 12px;
+
+}
+
+u {
+    color: purple;
+}
+
+
+/* Estilo da barra de pesquisa */
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #0078d7;
+    box-shadow: 0 0 6px rgba(0, 120, 215, 0.4);
+
+}
+
